@@ -9,11 +9,8 @@
     location /static/ {
 
         root /opt/serverPython/golem;
-    
         expires 30d;
-    
         add_header Pragma public;
-    
         add_header Cache-Control &#34;public&#34;;
 
     }
@@ -27,12 +24,12 @@
     execfile('key.py')
 
     FLAG = flag
-
-    app.secret\_key = key
+    app.secret_key = key
 
     ...
 
 
+    
 https://golem.asisctf.com/article?name=../../../../../opt/serverPython/golem/secret.py
 
 =>
