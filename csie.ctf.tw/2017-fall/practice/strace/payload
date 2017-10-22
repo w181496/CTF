@@ -1,0 +1,1 @@
+strace -s 10000 ./strace-b291608bfa48c94f508c35f7ab6ce46135b840a6

