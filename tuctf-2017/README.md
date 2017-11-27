@@ -3,7 +3,7 @@
 
 ## vuln chat
 
-第一個scanf %30s
+第一個`scanf %30s`
 
 可以控到第二個scanf的format string
 
@@ -164,8 +164,12 @@ decode後發現是cat index.txt
 
 用\n cat flag就可以繞過 (要先base64，再塞進cookie)
 
+`DQpjYXQgZmxhZw==`
+
 
 ## iframe and shame
+
+Command injection
 
 payload:
 
