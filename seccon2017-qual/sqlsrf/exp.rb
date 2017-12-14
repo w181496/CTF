@@ -7,7 +7,6 @@ require 'net/http'
 require 'uri'
 
 $url = 'http://sqlsrf.pwn.seccon.jp/sqlsrf/index.cgi'
-$set = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 $ans = ''
 
 (1..100).each do |i|

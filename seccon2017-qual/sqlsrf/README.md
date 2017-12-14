@@ -16,6 +16,7 @@ The hash-password is:
 
 `d2f37e101c0e76bcc90b5634a5510f64`
 
+ 
 
 Then, we can fill the hash password into cookie.
 
@@ -25,10 +26,11 @@ The password is:
 
 `Yes!Kusomon!!`
 
+ 
 
 After login, there is an wget functionality.
 
-Because the problem description, we know that wget can be used to forge smtp to send a mail.
+Because the problem description, we know that wget can be used to forge smtp to send a mail. (CRLF injection)
 
 The final payload:
 
