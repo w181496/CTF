@@ -6,6 +6,8 @@
 
 `umail`傳陣列，他`strlen`會回傳NULL (他只檢查最大長度，沒檢查最小長度)
 
+umail傳陣列，裡面的字串元素就可以不受長度限制惹
+
 由於pack時字串是一組一組串在result結尾
 
 parse時依序parse
@@ -16,13 +18,13 @@ parse時依序parse
 
 所以可以構造umail[]，讓裡面的字串元素去蓋後面的lvl和pwd
 
-最後排法大概是這樣子：
+最後排法大概是這樣子：  (其中ARR為chr(1)，STR為chr(2))
 
 `ARR chr(1) STR chr(strlen(umail[0])) chr(32) md5(password) STR chr(strlen(ip)) ip STR chr(1) 2`
 
 他解析時碰到ARR會當作STR，然後把chr(1)當字串長度，再把STR當成字串內容
 
-接著後面就是我們可控的部分惹
+接著後面就是我們可控的部分惹，去蓋掉lvl和pwd就可(pwd要蓋md5過後的)
 
 
 ## Payload
