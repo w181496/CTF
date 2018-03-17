@@ -351,6 +351,24 @@ payload:
 
 凱撒密碼
 
+### classic cipher 1
+
+個人覺得這種題有點坑...(也有可能是我沒領悟正確思路)
+
+反正就是有一點猜測的味道在裡頭
+
+要大概猜一下FLAG長啥樣
+
+substitution cipher就是代換法，例如a對應d、b對應到z....
+
+這提前四個很明顯看得出來，後面就要稍微猜測一下
+
+例如可以猜測SUBSTITON CIPHER之類的，會出現在FLAG中
+
+然後慢慢拼湊
+
+可以用這個網站幫忙湊： https://www.dcode.fr/monoalphabetic-substitution
+
 ## Programming
 
 ### fast
