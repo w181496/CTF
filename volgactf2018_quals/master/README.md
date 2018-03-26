@@ -1,0 +1,6 @@
+- 用wireshark開
+- MySQL -> Follow TCP Stream
+- 可以發現一堆帳號密碼
+    - Find -> admin
+    - admin aep7Woo9eef7quiedooPh0oow
+    - 登入就會噴FLAG
