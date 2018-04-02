@@ -1,0 +1,5 @@
+- nc連上去會噴一篇文章
+- google搜一下可以發現是這篇的一部分：https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+- 比對一下可以找出這些多出來的字元：
+    - `_7d_hglplo}5{n1almecd_gf`
+    - 用力排一下：`flag{h1dden_7cp_m5g_lol}`

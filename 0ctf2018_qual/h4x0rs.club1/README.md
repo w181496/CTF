@@ -1,0 +1,5 @@
+- 眼睛看得很痛的題目
+- 帳號密碼打`admin`/`admin`就登入進去了
+    - 黑人問號 非常奇葩的題目.........
+- 然後去admin的profile就能看到flag
+    - `flag{h0w_d1d_y0u_get_thiSs_gud_luck_for_next_one}`
