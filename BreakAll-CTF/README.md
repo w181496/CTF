@@ -4,6 +4,8 @@
 
 如果有找到會再補上
 
+![](https://github.com/w181496/CTF/blob/master/BreakAll-CTF/solved.png)
+
 ## EasyPeasy
 
 單純的Union Based MySQL Injection
@@ -41,6 +43,10 @@ MySQL有點weak type的味道
 因為`'字串' | 0` 會變成0，所以整句變成`WHERE username=0`
 
 所以假設DB中的username是`admin`，那這個條件就會成立 (類似PHP)
+
+舉個簡單例子：`SELECT 'admin'=0;`
+
+會回傳`1`
 
 另外這題解答不唯一
 
