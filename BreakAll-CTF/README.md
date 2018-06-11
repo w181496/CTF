@@ -6,6 +6,8 @@
 
 ![](https://github.com/w181496/CTF/blob/master/BreakAll-CTF/solved.png)
 
+Rank: 1
+
 ## EasyPeasy
 
 單純的Union Based MySQL Injection
@@ -102,6 +104,11 @@ OK，成功了
 所以只要改用`....//`，就會被取代成原本的`../`
 
 `....//....//....//....//....//....//....//flag`
+
+非預期解：
+
+可以直接`/flag`
+
 
 ## git leak
 
