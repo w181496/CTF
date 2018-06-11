@@ -222,6 +222,13 @@ one byte overflow
 
 ## Misc
 
+### welcome
+
+簽到題
+
+flag放在首頁的影片中
+
+
 ### flags
 
 這題藏了一堆假flag，浪費不少時間
