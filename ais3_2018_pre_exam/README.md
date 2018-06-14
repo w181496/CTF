@@ -26,6 +26,21 @@ flag會出現在某一輪的header中，但不會停下來，所以要自己檢�
 
 ### sushi
 
+題目:
+
+```php
+<?php
+// PHP is the best language for hacker
+// Find the flag !!
+highlight_file(__FILE__);
+$_ = $_GET['🍣'];
+
+if( strpos($_, '"') || strpos($_, "'") ) 
+	die('Bad Hacker :(');
+
+eval('die("' . substr($_, 0, 16) . '");');
+```
+
 這題解法很多：
 
 1. strpos沒有真正擋掉`"`，只要出現參數開頭，一樣可以使用 (strpos會回傳0)
@@ -61,6 +76,27 @@ flag會出現在某一輪的header中，但不會停下來，所以要自己檢�
 首先，可以發現有`.git`
 
 然後可以還原`index.cgi`的source code
+
+```perl
+#!/usr/bin/perl
+# My uploader!
+use strict;
+use warnings;
+use CGI;
+my $cgi = CGI->new;
+print $cgi->header();
+print "<body style=\"background: #caccf7 url('https://i.imgur.com/Syv2IVk.png');padding: 30px;\">";
+print "<p style='color:red'>No BUG Q_____Q</p>";
+print "<br>";
+print "<pre>";
+if( $cgi->upload('file') ) {
+        my $file = $cgi->param('file');
+        while(<$file>) {
+                print "$_";
+        }
+}
+print "</pre>";
+```
 
 這個source code做的事很簡單，就是把我們上傳文件的內容print出來
 
