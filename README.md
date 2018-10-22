@@ -2,6 +2,8 @@
 
 ## 2018
 
+* [HITCON CTF 2018](https://github.com/w181496/CTF/tree/master/hitcon2018)
+
 * [DCTF 2018 Qual](https://github.com/w181496/CTF/tree/master/dctf2018-qual)
 
 * [CSAW 2018 Qual](https://github.com/w181496/CTF/tree/master/csaw_2018_qual)
