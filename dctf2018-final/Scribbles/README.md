@@ -113,6 +113,8 @@ We can run the php script now.
 
 so the payload will cat everthing in `../`, then write to `_`.
 
+After we run the `files/time().z.php`, we can get the content of `config.php` in the `files/_`
+
 ## Flag
 
 config.php:
