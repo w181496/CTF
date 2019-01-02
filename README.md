@@ -2,6 +2,10 @@
 
 ## 2018
 
+* [35C3 CTF](https://github.com/w181496/CTF/tree/master/35c3)
+
+* [XMAS CTF 2018](https://github.com/w181496/CTF/tree/master/X-MAS_CTF2018/OurChristmasWishList)
+
 * [DCTF 2018 Final](https://github.com/w181496/CTF/tree/master/dctf2018-final)
 
 * [SECCON 2018 Qual](https://github.com/w181496/CTF/tree/master/seccon2018-qual)

