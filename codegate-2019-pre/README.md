@@ -1,7 +1,7 @@
 Codegate 2019 Preliminary
 ===
 
-[](https://github.com/w181496/CTF/blob/master/codegate-2019-pre/img3.png)
+![](https://github.com/w181496/CTF/blob/master/codegate-2019-pre/img3.png)
 
 # algo_auth
 
@@ -246,13 +246,13 @@ Then, we can sell our coin to gold in `sell.php`.
 
 If we got cash >= 999999999, we can buy the flag in `pay.php`.
 
-[](https://github.com/w181496/CTF/blob/master/codegate-2019-pre/img.png)
+![](https://github.com/w181496/CTF/blob/master/codegate-2019-pre/img.png)
 
 <br>
 
 http://110.10.147.112/?key=D0_N0T_RE1E@5E_0THER5&p=pay
 
-[](https://github.com/w181496/CTF/blob/master/codegate-2019-pre/img2.png)
+![](https://github.com/w181496/CTF/blob/master/codegate-2019-pre/img2.png)
 
 `FLAG{H0LD_Y0UR_C0IN_T0_9999-O9-O9!}`
 
