@@ -2,6 +2,10 @@
 
 ## 2019
 
+* [Codegate 2019 Final](https://github.com/w181496/CTF/tree/master/codegate2019-final)
+
+* [0CTF 2019 Qual](https://github.com/w181496/CTF/tree/master/0ctf2019_qual)
+
 * [Codegate 2019 Preliminary](https://github.com/w181496/CTF/tree/master/codegate-2019-pre)
 
 ## 2018
