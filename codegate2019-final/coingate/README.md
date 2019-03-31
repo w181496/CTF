@@ -31,6 +31,8 @@ admin.php:
 #print encrypted_text
 ?>
 ```
+(這邊第一版key是`coingate`，後來主辦方重開變`coingatecoingate`)
+
 
 config.php:
 
