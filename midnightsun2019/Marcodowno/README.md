@@ -1,5 +1,7 @@
 # Marcodowno
 
+- [English Version](https://balsn.tw/ctf_writeup/20190406-midnightsunctf/#marcodowno)
+
 - 這題會把輸入各種過濾:
 
 ```javascript

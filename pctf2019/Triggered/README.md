@@ -5,7 +5,7 @@
 - 給了一個plpgsql跑的microservice
 - plpgsql不是一般的SQL，是postgresql搞出的一個語言
 - 找一下可以發現source code: http://triggered.pwni.ng:52856/static/schema.sql
-- 我們的Request/Respons和header等的處理都會先經過plpgsql才進到資料庫
+- 我們的Request/Response和Header等的資料處理，都會先經過plpgsql才進到資料庫
 
 ## 漏洞
 

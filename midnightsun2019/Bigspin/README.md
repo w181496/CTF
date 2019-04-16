@@ -1,5 +1,7 @@
 # Bigspin
 
+- [English Version](https://balsn.tw/ctf_writeup/20190406-midnightsunctf/#bigspin)
+
 - 題目拿到有四個連結: `/admin`, `/uberadmin`, `/user`, `/pleb`
     - `/admin`噴404
     - `/pleb`正常顯示
