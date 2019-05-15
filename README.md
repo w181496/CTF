@@ -2,6 +2,10 @@
 
 ## 2019
 
+* [DEFCON CTF 2019 Qual](https://github.com/w181496/CTF/tree/master/defcon2019-qual)
+
+* [\*CTF](https://github.com/w181496/CTF/tree/master/star-ctf-2019)
+
 * [ASIS CTF 2019 Qual](https://github.com/w181496/CTF/tree/master/asis2019-qual)
 
 * [PlaidCTF 2019](https://github.com/w181496/CTF/tree/master/pctf2019)
