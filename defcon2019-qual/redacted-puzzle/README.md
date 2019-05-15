@@ -4,11 +4,11 @@
 
 把每個frame拔出來，然後用stegsolver去看，可以看到類似這樣子的多邊形:
 
-![](https://github.com/w181496/CTF/blob/master/defcon2019-qual/0.png)
+![](https://raw.githubusercontent.com/w181496/CTF/master/defcon2019-qual/redacted-puzzle/0.png)
 
-![](https://github.com/w181496/CTF/blob/master/defcon2019-qual/1.png)
+![](https://raw.githubusercontent.com/w181496/CTF/master/defcon2019-qual/redacted-puzzle/1.png)
 
-![](https://github.com/w181496/CTF/blob/master/defcon2019-qual/2.png)
+![](https://raw.githubusercontent.com/w181496/CTF/master/defcon2019-qual/redacted-puzzle/2.png)
 
 第一張Frame更直接告訴我們Flag alphabet
 
