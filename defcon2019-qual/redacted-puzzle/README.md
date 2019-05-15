@@ -20,14 +20,17 @@
 
 把以上線索拼湊之後，可以發現原型應該是個正八邊形
 
-然後，每個圖形會稍微逆時針旋轉
+![](https://raw.githubusercontent.com/w181496/CTF/master/defcon2019-qual/redacted-puzzle/ori.png)
+
 
 把正八邊形抓的點當作1，沒抓的點當0，然後從左上角開始順時針看
 
 可以發現前幾張圖構成以下的bit string:
 
 0.png: `10001100`
+
 1.png: `01100011`
+
 ...
 
 其中`10001` =  `17` 重複出現了三次
@@ -37,5 +40,7 @@
 所以很明顯這就是FLAG
 
 把每張圖抓的bit抓出，然後每五個bit去alphabet抓字元就行惹
+
+然後要稍微注意的是，每個圖形會稍微逆時針旋轉，愈到後面，抓的起點就不一定是最左上角
 
 `OOO{FORCES-GOVERN+TUBE+FRUIT_GROUP=FALLREMEMBER_WEATHER}`
