@@ -2,13 +2,15 @@
 
 這題給我們一個gif圖片
 
-把每個frame拔出來，然後用stegsolver去看，可以看到類似這樣子的多邊形:
+把每個frame拔出來，然後用stegsolver去看，調一下可以看到類似這樣子的多邊形:
 
 ![](https://raw.githubusercontent.com/w181496/CTF/master/defcon2019-qual/redacted-puzzle/0.png)
 
 ![](https://raw.githubusercontent.com/w181496/CTF/master/defcon2019-qual/redacted-puzzle/1.png)
 
 ![](https://raw.githubusercontent.com/w181496/CTF/master/defcon2019-qual/redacted-puzzle/2.png)
+
+...
 
 第一張Frame更直接告訴我們Flag alphabet
 
@@ -21,6 +23,10 @@
 把以上線索拼湊之後，可以發現原型應該是個正八邊形
 
 ![](https://raw.githubusercontent.com/w181496/CTF/master/defcon2019-qual/redacted-puzzle/ori.png)
+
+![](https://raw.githubusercontent.com/w181496/CTF/master/defcon2019-qual/redacted-puzzle/ori2.png)
+
+![](https://raw.githubusercontent.com/w181496/CTF/master/defcon2019-qual/redacted-puzzle/ori3.png)
 
 
 把正八邊形抓的點當作1，沒抓的點當0，然後從左上角開始順時針看
