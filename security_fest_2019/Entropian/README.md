@@ -8,14 +8,14 @@
 
 由於`<script src="xxx"></script>`太多重複字元
 
-故很容易想到要用`eval()`之類的方式，去跑`location.hash`, `windwos.name`, ...之類的
+故很容易想到要用`eval()`之類的方式，去跑`location.hash`, `window.name`, ...之類的
 
 最後發現`name`可以透過`<a>`的`target`來控制
 
 所以exploit流程就是:
 
 1. 用`<iframe>`引入我們的domain
-2. 在我們domain首頁放一個`<a>`，把`target`設成我們的payload，`href`設成`<SVG/ONLoAD=eval(name)>` (記得encoding一下)
+2. 在我們domain首頁放一個`<a>`，把`target`設成我們的payload，`href`指向`<SVG/ONLoAD=eval(name)>` (記得encoding一下)
 3. 再讓bot點擊這個link
 4. 最後bot會執行我們的payload
 
