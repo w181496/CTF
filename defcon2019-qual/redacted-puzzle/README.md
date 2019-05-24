@@ -1,5 +1,7 @@
 # Redacted puzzle
 
+[English Version](https://balsn.tw/ctf_writeup/20190513-defconctfqual/#misc)
+
 這題給我們一個gif圖片
 
 把每個frame拔出來，然後用stegsolver去看，調一下可以看到類似這樣子的多邊形:
