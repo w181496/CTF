@@ -36,4 +36,6 @@ INSERT INTO products VALUES('oculus-rift', sha256(....), ....);
 
 因為在db裡面他已經因為過長truncate了
 
+![](https://github.com/w181496/CTF/blob/master/fbctf2019/ProductsManager/pm.png)
+
 `fb{4774ck1n9_5q1_w17h0u7_1nj3c710n_15_4m421n9_:)}`

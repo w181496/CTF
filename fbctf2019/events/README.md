@@ -6,7 +6,13 @@
 
 但後來我從`asd:asd`這個帳號發現有人成功利用 python format string 漏洞撈到東西
 
-才開始踹 format string
+一開始還以為是有人故意放假的 Response 混淆大家
+
+結果發現重新整理，address 也會跟著變，才知道是真的，差點笑死
+
+![](https://github.com/w181496/CTF/blob/master/fbctf2019/events/asd.png)
+
+所以後來我才開始踹 format string
 
 然後發現漏洞在: `event_name=a&event_address=a&event_important=__dict__`
 
