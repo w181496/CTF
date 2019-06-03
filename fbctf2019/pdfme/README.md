@@ -27,3 +27,13 @@
 flag: `fb{wh0_7h0u6h7_l1br30ff1c3_c4n_b3_u53ful}`
 
 詳細見payload: [flag.fods](https://github.com/w181496/CTF/blob/master/fbctf2019/pdfme/flag.fods)
+
+
+
+p.s. 這邊有一個小地方要注意
+
+就是flag不在根目錄下XD
+
+我後來讀`/etc/passwd`，發現有`libreoffice_admin`這個 user
+
+才猜測flag在他的家目錄下面
