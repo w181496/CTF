@@ -29,9 +29,13 @@ if (isset($_REQUEST['cmd'])) {
 
 這題題目很短，用`preg_match`擋了一堆東西
 
-但我們知道PHP有pcre backtrace limit限制，當回溯超過1000000次時，會回傳false
+但我們知道PHP有`pcre.backtrack_limit`限制，預設情況下，當回溯超過`1000000`次時，會回傳 `false`
+
+(https://www.php.net/manual/en/pcre.configuration.php)
 
 在弱比較下等同匹配成功，就成功繞過惹
+
+(`false == 0` => `true`)
 
 e.g.
 
