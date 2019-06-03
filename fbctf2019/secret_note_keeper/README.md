@@ -3,7 +3,7 @@
 ## 題目分析
 
 - 這題乍看之下功能跟 35C3 filemanager 沒啥兩樣
-    - 登入/登出/註冊
+    - login/logout/register
     - Add Note
     - Search Note
     - Report Bug
@@ -67,3 +67,5 @@ for i in alphabet:
 ```
 
 如果收到 `ok` 就代表找到該字元，就能繼續爆下一個字元
+
+flag: `fb{cr055_s173_l34|<5_4r4_c00ool!!}`
