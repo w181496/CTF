@@ -1,6 +1,6 @@
 # hr_admin_module
 
-Solved: 3
+Solved: 4
 
 <br>
 
@@ -37,7 +37,7 @@ columns of searches: id,search
 current_query: SELECT * FROM searches WHERE search = 'YOUR_INPUT'
 ```
 
-但撈了一整天，DB 裡面沒啥可用的東西，`pg_read_file` , `pg_ls_dir` 等函數也都不能用
+但後來撈了一整天，DB 裡面沒看到啥可用的東西，`pg_read_file` , `pg_ls_dir` 等函數也都不能用
 
 可是 `/var/lib/postgresql/data/secret` 這個 path 很明顯是 default data directory
 
@@ -47,7 +47,7 @@ current_query: SELECT * FROM searches WHERE search = 'YOUR_INPUT'
 
 找了無數個小時，還翻了postgres src
 
-最後我在本機 local 端，試著找所有包含`read`的function: 
+最後我在本機 local 端，試著找所有名字包含`read`的 function: 
 
 `SELECT proname FROM pg_proc WHERE proname like '%read%';`
 
@@ -58,18 +58,14 @@ current_query: SELECT * FROM searches WHERE search = 'YOUR_INPUT'
  pg_stat_get_db_blk_read_time
  pg_read_file_old
  pg_read_file
- pg_read_file
- pg_read_file
- pg_read_binary_file
- pg_read_binary_file
  pg_read_binary_file
 ```
 
-最後找到 `lo_import`, `lo_read`, `lo_open`, ... 這系列的 function
+最後根據第一筆結果找到 `lo_import`, `lo_read`(`loread`), `lo_open`, ... 這些同系列的 function
 
 https://www.postgresql.org/docs/11/lo-funcs.html
 
-`lo_import` 可以把檔案載入進 Object 中
+官方文件中表示`lo_import` 可以把檔案載入進 Object 中
 
 遠端測試: `lo_import('/var/lib/postgresql/data/secret')`
 
