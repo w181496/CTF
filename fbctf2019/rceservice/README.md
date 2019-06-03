@@ -37,7 +37,7 @@ if (isset($_REQUEST['cmd'])) {
 
 (https://www.php.net/manual/en/pcre.configuration.php)
 
-![](https://github.com/w181496/CTF/blob/master/fbctf2019/rceservice/)
+![](https://github.com/w181496/CTF/blob/master/fbctf2019/rceservice/pcre.png)
 
 上圖紅底字就代表發生回溯 (regex101 is your good friend)
 
