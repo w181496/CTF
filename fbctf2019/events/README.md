@@ -1,5 +1,9 @@
 # events
 
+Solved: 23
+
+<br>
+
 這題其實一開始我們方向全錯
 
 一直往cookie去踹

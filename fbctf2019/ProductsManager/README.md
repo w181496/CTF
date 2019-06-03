@@ -1,5 +1,9 @@
 # Products Manager
 
+Solved: 431
+
+<br>
+
 題目直接給 source code
 
 裡面用了一堆 sql 操作
@@ -30,7 +34,7 @@ INSERT INTO products VALUES('oculus-rift', sha256(....), ....);
 
 在 non-strict mode 下，如果塞超過長度的值到 `CHAR` 或 `VARCHAR` 都會導致結果被 Truncation
 
-註冊`admin___________________________________________________________kaibro` 和一組你自己的密碼
+註冊帳號`admin___________________________________________________________kaibro` 和一組你自己的密碼
 
 (`_` is Space(空格))
 

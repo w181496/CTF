@@ -1,5 +1,9 @@
 # hr_admin_module
 
+Solved: 3
+
+<br>
+
 這題是這場我花最多時間的 web 題，不過還蠻好玩的，發現很多新招XD
 
 首先是 SQL Injection:

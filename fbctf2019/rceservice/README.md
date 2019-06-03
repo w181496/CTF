@@ -1,5 +1,9 @@
 # rceservice
 
+Solved: 31
+
+<br>
+
 ```php
 <?php
 
@@ -33,9 +37,26 @@ if (isset($_REQUEST['cmd'])) {
 
 (https://www.php.net/manual/en/pcre.configuration.php)
 
-在弱比較(Weak typing)下等同匹配成功，就成功繞過惹
+![](https://github.com/w181496/CTF/blob/master/fbctf2019/rceservice/)
+
+上圖紅底字就代表發生回溯 (regex101 is your good friend)
+
+Example:
+
+```
+php > var_dump(preg_match("/union.+select/is", "union select /*".str_repeat("s", 1000000)));
+bool(false)
+php > var_dump(preg_match("/union.+select/is", "union select /*".str_repeat("s", 1)));
+int(1)
+```
+
+這在一般弱比較(Weak typing)情形下等同匹配成功
 
 (`false == 0` => `true`)
+
+但這邊其實不用管弱比較，因為他直接把`preg_match`回傳值丟進`if`做判斷
+
+所以當回溯超過上限時，回傳`false`，自動就會略過這個`if`，進入到`else`裡面
 
 e.g.
 
