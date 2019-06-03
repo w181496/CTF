@@ -28,7 +28,9 @@ INSERT INTO products VALUES('oculus-rift', sha256(....), ....);
 
 第一個直覺就是踹mysql truncate
 
-註冊`admin                                                           kaibro`
+註冊`admin___________________________________________________________kaibro`
+
+(`_` 是 空格的意思XD)
 
 然後就能用你設定的這組密碼登入`admin`惹
 
