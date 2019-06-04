@@ -2,6 +2,8 @@
 
 Solved: 431
 
+### [English Version](https://github.com/w181496/CTF/blob/master/fbctf2019/ProductsManager/README_en.md)
+
 <br>
 
 題目直接給 source code
@@ -38,9 +40,9 @@ INSERT INTO products VALUES('oculus-rift', sha256(....), ....);
 
 (`_` is Space(空格))
 
-然後就能用你設定的這組密碼登入`admin`惹
+然後就能用你設定的這組密碼登入`facebook`惹
 
-因為在db裡面他已經因為過長truncate了，admin 帳號就會多一組出來
+因為在db裡面他已經因為過長truncate了，facebook 帳號就會多一組出來
 
 ![](https://github.com/w181496/CTF/blob/master/fbctf2019/ProductsManager/pm.png)
 

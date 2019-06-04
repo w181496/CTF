@@ -2,11 +2,27 @@
 
 Solved: 23
 
+### [English Version](https://github.com/w181496/CTF/blob/master/fbctf2019/events/README_en.md)
+
 <br>
 
 這題其實一開始我們方向全錯
 
 一直往cookie去踹
+
+他的 cookie 由三部分組成: data, timestamp, signature
+
+可以由以下腳本去解 data 和 timestamp:
+
+```python
+from itsdangerous import base64_decode
+
+s = "ImFzZCI.XPVouA.bToZpDkYXf5CMWcolC-CWgdaDdU"
+data, timestamp,secret = s.split('.')
+
+print(base64_decode(data))
+print(int.from_bytes(base64_decode(timestamp),byteorder='big'))
+```
 
 但後來我從`asd:asd`這個帳號發現有人成功利用 python format string 漏洞撈到東西
 

