@@ -20,6 +20,8 @@ e.g.
 
 - 沒warning: `admin'--` or `admin''` or `admin' and 1=2 --` ...
 
+![](https://github.com/w181496/CTF/blob/master/fbctf2019/hr_admin_module/sqlinj.png)
+
 而且這題似乎擋了很多東西，`pg_sleep`無法用，`dblink`簡單踹一下似乎也沒dns request (但賽後才知道好像其實可以?)
 
 後來就發現 `repeat()` 可以讓 Server 卡住 

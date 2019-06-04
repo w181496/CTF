@@ -15,6 +15,8 @@ e.g.
 
 This is an obvious SQL Injection vulnerability.
 
+![](https://github.com/w181496/CTF/blob/master/fbctf2019/hr_admin_module/sqlinj.png)
+
 And this chellenge seems like to restrict the permissions of some functions, e.g. `pg_sleep()`, `pg_read_file()`, ...
 
 But I found that `repeat()` function will cause time delay!
