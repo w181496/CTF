@@ -10,7 +10,6 @@
         - no `putenv` this time :p
     - `open_basedir: /var/www/html:/tmp`
 
-
 ![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker\ \(not very\)\ Hard/phpinfo.png)
 
 - This challenge tells us there is a backdoor in somewhere
@@ -52,6 +51,10 @@ foreach($file_list as $f){
 
 - Then, starting to create FastCGI payload to overwrite settings. Here is the payload reference: [payload.php](https://github.com/w181496/FuckFastcgi/blob/master/index.php)
     - change the config, then run it
+
+
+![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker\ \(not very\)\ Hard/getflag.png)
+
 - RCE Get!
 - `/readflag` => `flag{PHP-FPM is awesome and I think the best pratice is chroot your PHP}`
 

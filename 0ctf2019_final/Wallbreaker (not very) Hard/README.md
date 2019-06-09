@@ -1,6 +1,6 @@
 # Wallbreaker (not very) Hard
 
-[English Version](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker\ \(not very\)\ Hard/README_en.md)
+[English Version](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker%20(not%20very)%20Hard/README_en.md)
 
 ## 題目分析
 
@@ -12,7 +12,7 @@
         - 這次不能再用`putenv`了:p
     - `open_basedir: /var/www/html:/tmp`
 
-![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker\ \(not very\)\ Hard/phpinfo.png)
+![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker%20(not%20very)%20Hard/phpinfo.png)
 
 - 首先這題告訴我們有個backdoor，但要自己去找
 - 踹了一下發現有`.index.php.swp`
@@ -52,6 +52,8 @@ foreach($file_list as $f){
 
 - 接著開始偽造 FastCGI Protocol 寫掉設定，這邊可以參考 [payload.php](https://github.com/w181496/FuckFastcgi/blob/master/index.php)
     - 把裡面對應的設定改掉就行
+
+![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker\ \(not very\)\ Hard/getflag.png)
 
 - RCE Get!
 - `/readflag` => `flag{PHP-FPM is awesome and I think the best pratice is chroot your PHP}`
