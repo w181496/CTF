@@ -10,7 +10,7 @@
         - no `putenv` this time :p
     - `open_basedir: /var/www/html:/tmp`
 
-![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker\ \(not very\)\ Hard/phpinfo.png)
+![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker%20(not%20very)%20Hard/phpinfo.png)
 
 - This challenge tells us there is a backdoor in somewhere
 - After scanning, I found `.index.php.swp`
