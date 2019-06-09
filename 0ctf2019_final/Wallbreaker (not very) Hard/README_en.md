@@ -14,12 +14,12 @@
 
 - This challenge tells us there is a backdoor in somewhere
 - After scanning, I found `.index.php.swp`
-- backdoor key: `eval($_POST["anfkBJbfqkfqasd"]);`
+    - Recover it and get the backdoor key: `eval($_POST["anfkBJbfqkfqasd"]);`
 - OK, it's time for bypass `disable_functions`和`open_basedir`
 
 ## Exploit
 
-- In 0CTF qual, I forge fastcgi protocol to bypass `open_basedir` (overwrite the settings)
+- In 0CTF qual, I forged fastcgi protocol to bypass `open_basedir` (overwrite the settings)
 - But I found there is another way that is possible to bypass `disable_functions` to RCE
     - using the `extension`!
 - So we just need to write the `extension_dir` and `extension` in `PHP_ADMIN_VALUE`, then we can load arbitrary extension
