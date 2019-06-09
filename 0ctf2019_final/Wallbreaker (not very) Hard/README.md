@@ -1,6 +1,6 @@
 # Wallbreaker (not very) Hard
 
-[English Version](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker%20(not%20very)%20Hard/README_en.md)
+### [English Version](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker%20(not%20very)%20Hard/README_en.md)
 
 ## 題目分析
 
@@ -53,7 +53,7 @@ foreach($file_list as $f){
 - 接著開始偽造 FastCGI Protocol 寫掉設定，這邊可以參考 [payload.php](https://github.com/w181496/FuckFastcgi/blob/master/index.php)
     - 把裡面對應的設定改掉就行
 
-![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker\ \(not very\)\ Hard/getflag.png)
+![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker%20(not%20very)%20Hard/getflag.png)
 
 - RCE Get!
 - `/readflag` => `flag{PHP-FPM is awesome and I think the best pratice is chroot your PHP}`

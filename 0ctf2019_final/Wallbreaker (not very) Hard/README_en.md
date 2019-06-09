@@ -53,7 +53,7 @@ foreach($file_list as $f){
     - change the config, then run it
 
 
-![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker\ \(not very\)\ Hard/getflag.png)
+![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker%20(not%20very)%20Hard/getflag.png)
 
 - RCE Get!
 - `/readflag` => `flag{PHP-FPM is awesome and I think the best pratice is chroot your PHP}`
