@@ -50,7 +50,7 @@ foreach($file_list as $f){
 
 => `/var/run/php/U_wi11_nev3r_kn0w.sock`
 
-- 接著開始偽造 FastCGI Protocol 寫掉設定，這邊可以參考 [payload.php](https://github.com/w181496/FuckFastcgi/blob/master/index.php)
+- 接著開始偽造 FastCGI Protocol 寫掉設定，這邊可以參考我的另一個repo: [Tool](https://github.com/w181496/FuckFastcgi/)
     - 把裡面對應的設定改掉就行
 
 ![](https://github.com/w181496/CTF/blob/master/0ctf2019_final/Wallbreaker%20(not%20very)%20Hard/getflag.png)

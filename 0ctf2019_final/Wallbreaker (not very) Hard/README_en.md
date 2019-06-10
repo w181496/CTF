@@ -49,7 +49,7 @@ foreach($file_list as $f){
 
 => `/var/run/php/U_wi11_nev3r_kn0w.sock`
 
-- Then, starting to create FastCGI payload to overwrite settings. Here is the payload reference: [payload.php](https://github.com/w181496/FuckFastcgi/blob/master/index.php)
+- Then, starting to create FastCGI payload to overwrite settings. Here is my tool to generate payload: [Tool](https://github.com/w181496/FuckFastcgi/)
     - change the config, then run it
 
 
