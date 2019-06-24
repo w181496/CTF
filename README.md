@@ -2,6 +2,8 @@
 
 ## 2019
 
+* [Google CTF 2019 Qual](https://github.com/w181496/CTF/tree/master/googlectf-2019-qual)
+
 * [0CTF 2019 Final](https://github.com/w181496/CTF/tree/master/0ctf2019_final)
 
 * [Facebook CTF 2019](https://github.com/w181496/CTF/tree/master/fbctf2019)
@@ -93,7 +95,7 @@
 
 ## Website
 
-* [計算機安全](https://github.com/w181496/CTF/tree/master/csie.ctf.tw/)
+* [計算機安全 (EDU-CTF)](https://github.com/w181496/CTF/tree/master/csie.ctf.tw/)
 
 * [Pwnable.tw](https://github.com/w181496/CTF/tree/master/pwnable.tw)
 
