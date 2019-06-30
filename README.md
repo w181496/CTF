@@ -2,6 +2,8 @@
 
 ## 2019
 
+* [ISITDTU CTF 2019 Qual](https://github.com/w181496/CTF/tree/master/ISITDTU-CTF-2019-qual)
+
 * [Google CTF 2019 Qual](https://github.com/w181496/CTF/tree/master/googlectf-2019-qual)
 
 * [0CTF 2019 Final](https://github.com/w181496/CTF/tree/master/0ctf2019_final)
