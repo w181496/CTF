@@ -2,6 +2,12 @@
 
 ## 2019
 
+* [N1CTF 2019](https://github.com/w181496/CTF/tree/master/n1ctf2019)
+
+* [Trendmicro CTF 2019 Qual](https://github.com/w181496/CTF/tree/master/trendmicro-ctf-2019)
+
+* [DCTF 2019 Qual](https://github.com/w181496/CTF/tree/master/dctf2019-qual)
+
 * [ISITDTU CTF 2019 Qual](https://github.com/w181496/CTF/tree/master/ISITDTU-CTF-2019-qual)
 
 * [Google CTF 2019 Qual](https://github.com/w181496/CTF/tree/master/googlectf-2019-qual)
