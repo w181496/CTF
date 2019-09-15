@@ -1,5 +1,7 @@
 # BNV
 
+[English Version](https://github.com/w181496/CTF/blob/master/googlectf-2019-qual/bnv/README_en.md)
+
 這題題目會把送出的選項編碼成點字 
 
 (https://www.pharmabraille.com/pharmaceutical-braille/the-braille-alphabet/)
