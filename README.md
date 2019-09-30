@@ -2,6 +2,8 @@
 
 ## 2019
 
+* [Bsides Delphi CTF 2019](https://github.com/w181496/CTF/tree/master/bsides_delphi_ctf_2019)
+
 * [CSAW 2019 Qual](https://github.com/w181496/CTF/tree/master/csaw_2019_qual)
 
 * [N1CTF 2019](https://github.com/w181496/CTF/tree/master/n1ctf2019)
