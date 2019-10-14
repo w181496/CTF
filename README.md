@@ -2,6 +2,8 @@
 
 ## 2019
 
+* [HITCON CTF 2019](https://github.com/w181496/CTF/tree/master/hitcon2019-qual)
+
 * [Bsides Delphi CTF 2019](https://github.com/w181496/CTF/tree/master/bsides_delphi_ctf_2019)
 
 * [CSAW 2019 Qual](https://github.com/w181496/CTF/tree/master/csaw_2019_qual)
