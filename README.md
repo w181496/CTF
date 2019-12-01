@@ -2,6 +2,8 @@
 
 ## 2019
 
+* [CTFZone 2019 Qual](https://github.com/w181496/CTF/tree/master/CTFZone-2019-qual)
+
 * [Dragon CTF 2019 Final](https://github.com/w181496/CTF/tree/master/dragonctf-final-2019)
 
 * [SECCON 2019 Qual](https://github.com/w181496/CTF/tree/master/seccon2019-qual)
