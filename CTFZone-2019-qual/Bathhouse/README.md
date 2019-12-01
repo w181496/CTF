@@ -2,9 +2,9 @@
 
 超級通靈大爛題
 
-- Step1. /robots
+- Step1. /robots.txt
     - 可以找到 `/set_price` 這個 endpoint
-    - 會導向到 /accounts，是 Django 的 admin 登入介面
+    - 會導向到 `/accounts`，是 Django 的 admin 登入介面
 
 - Step2. SQL Injection
     - Book 的地方，name 欄位可以做 Error Based SQL Injection
@@ -25,9 +25,9 @@
         - Submodules: task, calculate
     - 而這個endpoint需要自己掃才能找到
 
-- Step5. 讀source code
+- Step5. 讀 Django source code
     - 用 iframe 讀 `/opt/project/calculate/views.py`
-        - `#     Get sync data by http request.#     syncData('http://syncdata/sync.html'`
-    - 接著繼續用iframe訪問http://syncdata/sync.html就能拿到flag
+        - `# Get sync data by http request.#     syncData('http://syncdata/sync.html'`
+    - 接著繼續用 iframe 訪問` http://syncdata/sync.html` 就能拿到flag
 - `ctfzone{0190af5705a38115cd6dee6e7d79e317}`
 

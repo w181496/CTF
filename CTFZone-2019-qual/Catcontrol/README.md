@@ -2,7 +2,7 @@
 
 蠻有趣的一題java題
 
-從 robots.txt 可以看到有 /monitoring 這個路徑
+從 `robots.txt` 可以看到有 `/monitoring` 這個路徑
 
 連過去是 JavaMelody 的監控頁面
 
@@ -48,7 +48,7 @@ xxe.dtd:
 
 <br>
 
-踹了幾種方向失敗後，嘗試透過tomcat manager做SSRF去RCE
+踹了幾種方向失敗後，嘗試透過 tomcat manager 做 SSRF 去 RCE
 
 從`file:////usr/share/tomcat6/conf/tomcat-users.xml`可以讀到tomcat manager的帳號密碼
 
@@ -108,3 +108,7 @@ sudo -u root /opt/327a6c4304ad5938eaf0efb6cc3e53dc.sh
 =>
 
 `ctfzone{88877b43-5689-4404-b978-e908bd1e0635}`
+
+
+
+![](https://github.com/w181496/CTF/blob/master/CTFZone-2019-qual/Catcontrol/catcontrol.png)
