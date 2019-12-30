@@ -2,13 +2,15 @@
 
 ## 2019
 
+* [hxp 36C3 CTF](https://github.com/w181496/CTF/tree/master/36c3-ctf)
+
 * [CTFZone 2019 Qual](https://github.com/w181496/CTF/tree/master/CTFZone-2019-qual)
 
 * [Dragon CTF 2019 Final](https://github.com/w181496/CTF/tree/master/dragonctf-final-2019)
 
 * [SECCON 2019 Qual](https://github.com/w181496/CTF/tree/master/seccon2019-qual)
 
-* [HITCON CTF 2019](https://github.com/w181496/CTF/tree/master/hitcon2019-qual)
+* [HITCON CTF 2019 Qual](https://github.com/w181496/CTF/tree/master/hitcon2019-qual)
 
 * [Bsides Delphi CTF 2019](https://github.com/w181496/CTF/tree/master/bsides_delphi_ctf_2019)
 
