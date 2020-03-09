@@ -2,6 +2,8 @@
 
 ## 2020
 
+* [zer0pts CTF 2020](https://github.com/w181496/CTF/tree/master/zer0pts2020)
+
 * [Insomni'hack teaser 2020](https://github.com/w181496/CTF/tree/master/insomnihack_teaser_2020)
 
 ## 2019
