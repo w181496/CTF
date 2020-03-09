@@ -11,7 +11,7 @@
 其中 `table_name` 和 `type` 可以注入 (沒有被反引號包起來)
 
 ```
-create table [INJECT] (dummy1 TEXT, dummy2 TEXT, [INJECT])
+create table [INJECT] (dummy1 TEXT, dummy2 TEXT, `col_name` [INJECT])
 ```
 
 中間會過 `is_valid()` 檢查
@@ -38,7 +38,9 @@ https://www.sqlite.org/lang_createtable.html
 
 賽後才知道原來 sqlite 可以這樣玩:
 
-`CREATE TABLE a AS SELECT sql [ (dummy1 TEXT, dummy2 TEXT, ]FROM sqlite_master;`
+```
+CREATE TABLE a AS SELECT sql [ (dummy1 TEXT, dummy2 TEXT, `col_name` ]FROM sqlite_master;
+```
 
 成功串起 `table_name` 和 `type`
 
