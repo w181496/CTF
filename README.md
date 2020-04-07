@@ -2,6 +2,10 @@
 
 ## 2020
 
+* [MidnightSun CTF 2020 Qual](https://github.com/w181496/CTF/tree/master/midnightsun2020)
+
+* [VolgaCTF 2020 Qual](https://github.com/w181496/CTF/tree/master/volgactf2020_quals)
+
 * [zer0pts CTF 2020](https://github.com/w181496/CTF/tree/master/zer0pts2020)
 
 * [Insomni'hack teaser 2020](https://github.com/w181496/CTF/tree/master/insomnihack_teaser_2020)
