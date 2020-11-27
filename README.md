@@ -2,6 +2,8 @@
 
 ## 2020
 
+* [WCTF 2020](https://github.com/w181496/CTF/tree/master/wctf2020)
+
 * [MidnightSun CTF 2020 Qual](https://github.com/w181496/CTF/tree/master/midnightsun2020)
 
 * [VolgaCTF 2020 Qual](https://github.com/w181496/CTF/tree/master/volgactf2020_quals)
