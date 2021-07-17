@@ -22,6 +22,8 @@
 
 <br>
 
+![](https://github.com/w181496/CTF/blob/master/0ctf2021_qual/1linephp/zip_struct.png)
+
 仔細閱讀 zip 結構後，可以知道 php libzip 是先去檔案尾端找 End of Centry Directory (EOCD) 區塊
 
 再從裡頭解析 Central Directory 的 offset，去找到 Central Directory 區塊
@@ -41,6 +43,8 @@ Local file header 區塊中，又能透過 file name length 和 extra field leng
 所以
 
 預期解：把 Central Directory 和 End of Central Directory 中的 offset (相對檔案開頭) 都加上 16，這樣上傳後，開頭加上16 bytes的大便後，一樣能被正常解析
+
+![](https://github.com/w181496/CTF/blob/master/0ctf2021_qual/1linephp/zip-sol.png)
 
 非預期解：直接把 zip 檔開頭 16 bytes 移除再上傳。 why? 因為 16 bytes 的垃圾不會蓋到 file name length 和 extra field length 等欄位，所以解析時一樣能正常算出file data length等內容
 
