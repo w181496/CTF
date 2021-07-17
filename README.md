@@ -2,6 +2,8 @@
 
 ## 2021
 
+* [0CTF 2021 Qual](https://github.com/w181496/CTF/tree/master/0ctf2021_qual)
+
 * [DEFCON CTF 2021 Qual](https://github.com/w181496/CTF/tree/master/defcon2021-qual)
 
 * [VolgaCTF 2021 Qual](https://github.com/w181496/CTF/tree/master/volgactf2021_quals)
