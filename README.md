@@ -2,6 +2,8 @@
 
 ## 2021
 
+* [Google CTF 2021 Qual](https://github.com/w181496/CTF/tree/master/googlectf-2021-qual)
+
 * [0CTF 2021 Qual](https://github.com/w181496/CTF/tree/master/0ctf2021_qual)
 
 * [DEFCON CTF 2021 Qual](https://github.com/w181496/CTF/tree/master/defcon2021-qual)
