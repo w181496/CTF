@@ -1,5 +1,7 @@
 # gpushop
 
+[English version](README_en.md)
+
 題目給出一包超爆幹複雜的source code
 
 裡面是 k8s 包的 haproxy, varnish, 跟兩台 nginx+php-fpm 架的 laravel 網站

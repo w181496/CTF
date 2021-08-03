@@ -1,5 +1,7 @@
 # letschat
 
+[English version](README_en.md)
+
 打開題目是一個簡單聊天室
 
 可以創建 room , invite 其他人進來 room, 離開 room, 傳訊息等基本功能
