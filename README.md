@@ -2,6 +2,10 @@
 
 ## 2021
 
+* [ACSC 2021 Qual](https://github.com/w181496/CTF/tree/master/ACSC2021_qual)
+
+* [ALLES! CTF 2021](https://github.com/w181496/CTF/tree/master/allesctf2021)
+
 * [CyBRICS CTF 2021](https://github.com/w181496/CTF/tree/master/CyBRICS_CTF_2021)
 
 * [Google CTF 2021 Qual](https://github.com/w181496/CTF/tree/master/googlectf-2021-qual)
