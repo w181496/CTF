@@ -2,6 +2,8 @@
 
 ## 2021
 
+* [0CTF 2021 Final](https://github.com/w181496/CTF/tree/master/0ctf2021_final)
+
 * [ACSC 2021 Qual](https://github.com/w181496/CTF/tree/master/ACSC2021_qual)
 
 * [ALLES! CTF 2021](https://github.com/w181496/CTF/tree/master/allesctf2021)
