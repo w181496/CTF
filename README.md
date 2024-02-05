@@ -1,5 +1,13 @@
 # My CTF Writeups
 
+## 2024
+
+* [DiceCTF 2024](https://github.com/w181496/CTF/tree/master/DiceCTF2024/)
+
+## 2023
+
+* [SECCON 2023 Qual](https://github.com/w181496/CTF/tree/master/seccon2023-qual/)
+
 ## 2022
 
 * [TSJ CTF 2022](https://github.com/w181496/CTF/tree/master/TSJ_CTF_2022)
