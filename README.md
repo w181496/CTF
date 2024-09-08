@@ -2,6 +2,10 @@
 
 ## 2024
 
+* [DEVCORE Wargame 2024](https://github.com/w181496/CTF/tree/master/devcore-wargame2024/README.md)
+
+* [HITCON CTF 2024 Qual](https://github.com/w181496/CTF/tree/master/hitcon2024-qual/echo-as-a-service/README.md)
+
 * [DiceCTF 2024](https://github.com/w181496/CTF/tree/master/DiceCTF2024/)
 
 ## 2023
